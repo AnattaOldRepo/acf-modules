@@ -77,6 +77,209 @@
 
                 }
 
+                if ( get_row_layout() == 'three_wide_top_images' ) : ?>
+
+					<div class="module">
+
+					<?php
+
+					if ( get_sub_field( 'section_title' ) ) :
+
+					?>
+
+						<h2><?php the_sub_field( 'section_title' ); ?></h2>
+
+					<?php
+
+					endif;
+
+					// Section 1
+
+					if ( get_sub_field( 'st_one_image' ) || get_sub_field( 'st_one_small_title' ) ||
+						get_sub_field( 'st_one_main_title' ) ||  get_sub_field( 'st_one_description' ) ) :
+
+					?>
+
+						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'st_one_image' ) ) :
+
+							?>
+
+								<img src='<?php the_sub_field( 'st_one_image' ); ?>' />
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_one_small_title' ) ) :
+
+							?>
+
+								<h6><?php the_sub_field( 'st_one_small_title' ); ?></h6>
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_one_main_title' ) ) :
+
+							?>
+
+								<h4><?php the_sub_field( 'st_one_main_title' ); ?></h4>
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_one_description' ) ) :
+
+							?>
+
+								<p><?php the_sub_field( 'st_one_description' ); ?></p>
+
+							<?php
+
+							endif;
+
+					?>
+
+						</div> <!-- .module-section-->
+
+					<?php
+
+					endif;
+
+					// Section 2
+
+					if ( get_sub_field( 'st_two_image' ) || get_sub_field( 'st_two_small_title' ) ||
+					get_sub_field( 'st_two_main_title' ) ||  get_sub_field( 'st_two_description' ) ) :
+
+					?>
+
+						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'st_two_image' ) ) :
+
+							?>
+
+								<img src='<?php the_sub_field( 'st_two_image' ); ?>' />
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_two_small_title' ) ) :
+
+							?>
+
+								<h6><?php the_sub_field( 'st_two_small_title' ); ?></h6>
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_two_main_title' ) ) :
+
+							?>
+
+								<h4><?php the_sub_field( 'st_two_main_title' ); ?></h4>
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_two_description' ) ) :
+
+							?>
+
+								<p><?php the_sub_field( 'st_two_description' ); ?></p>
+
+							<?php
+
+							endif;
+
+							?>
+
+						</div> <!-- .module-section-->
+
+					<?php
+
+					endif;
+
+					// Section 3
+
+					if ( get_sub_field( 'st_three_image' ) || get_sub_field( 'st_three_small_title' ) ||
+						get_sub_field( 'st_three_main_title' ) ||  get_sub_field( 'st_three_description' ) ) :
+
+						?>
+
+						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'st_three_image' ) ) :
+
+							?>
+
+								<img src='<?php the_sub_field( 'st_three_image' ); ?>' />
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_three_small_title' ) ) :
+
+							?>
+
+								<h6><?php the_sub_field( 'st_three_small_title' ); ?></h6>
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_three_main_title' ) ) :
+
+							?>
+
+								<h4><?php the_sub_field( 'st_three_main_title' ); ?></h4>
+
+							<?php
+
+							endif;
+
+							if ( get_sub_field( 'st_three_description' ) ) :
+
+							?>
+
+								<p><?php the_sub_field( 'st_three_description' ); ?></p>
+
+							<?php
+
+							endif;
+
+							?>
+
+						</div> <!-- .module-section-->
+
+					<?php
+
+					endif;
+
+					?>
+
+					<div class="clear"></div>
+
+					</div> <!-- .module -->
+
+				<?php
+
+				endif;
+
             endwhile;
 
 		endif;
