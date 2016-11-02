@@ -280,6 +280,318 @@
 
 				endif;
 
+                if ( get_row_layout() == 'four_section_titles' ) : ?>
+
+					<div class="module">
+
+					<?php
+
+					if ( get_sub_field( 'txt_four_section_heading' ) ) :
+
+					?>
+
+						<h2><?php the_sub_field( 'txt_four_section_heading' ); ?></h2>
+
+					<?php
+
+					endif;
+
+
+					// Section 1
+					$fields = array( "txt_sec_one_main_title", "txt_sec_one_small_title", "txa_sec_one_description", "txt_sec_one_cta_label", "url_sec_one_cta_url" );
+
+                    if( is_acf_field_exists( $fields ) ) : ?>
+
+						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_one_small_title' ) ) :
+
+								?>
+
+								<h6><?php the_sub_field( 'txt_sec_one_small_title' ); ?></h6>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_one_main_title' ) ) :
+
+							?>
+
+								<h4><?php the_sub_field( 'txt_sec_one_main_title' ); ?></h4>
+
+							<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txa_sec_one_description' ) ) :
+
+								?>
+
+								<p><?php the_sub_field( 'txa_sec_one_description' ); ?></p>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_one_cta_label' ) && get_sub_field( 'url_sec_one_cta_url' ) ) :
+
+								?>
+
+								<a href='<?php the_sub_field( 'url_sec_one_cta_url' ); ?>'><?php the_sub_field( 'txt_sec_one_cta_label' ); ?></a>
+
+								<?php
+
+							endif;
+
+							?>
+
+						</div> <!-- .module-section -->
+
+					<?php
+
+					endif;
+
+					?>
+
+					<?php
+
+					// Section 2
+					$fields = array( "txt_sec_two_main_title", "txt_sec_two_small_title", "txa_sec_two_description", "txt_sec_two_cta_label", "url_sec_two_cta_url" );
+
+					if( is_acf_field_exists( $fields ) ) : ?>
+
+						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_two_small_title' ) ) :
+
+							?>
+
+								<h6><?php the_sub_field( 'txt_sec_two_small_title' ); ?></h6>
+
+							<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_two_main_title' ) ) :
+
+							?>
+
+								<h4><?php the_sub_field( 'txt_sec_two_main_title' ); ?></h4>
+
+							<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txa_sec_two_description' ) ) :
+
+							?>
+
+								<p><?php the_sub_field( 'txa_sec_two_description' ); ?></p>
+
+							<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_two_cta_label' ) && get_sub_field( 'url_sec_two_cta_url' ) ) :
+
+								?>
+
+								<a href='<?php the_sub_field( 'url_sec_two_cta_url' ); ?>'><?php the_sub_field( 'txt_sec_two_cta_label' ); ?></a>
+
+								<?php
+
+							endif;
+
+					?>
+
+						</div> <!-- .module-section -->
+
+					<?php
+
+					endif;
+
+					?>
+
+					<?php
+
+					// Section 3
+					$fields = array( "txt_sec_three_main_title", "txt_sec_three_small_title", "txa_sec_three_description", "txt_sec_three_cta_label", "url_sec_three_cta_url" );
+
+					if( is_acf_field_exists( $fields ) ) : ?>
+
+						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_three_small_title' ) ) :
+
+								?>
+
+								<h6><?php the_sub_field( 'txt_sec_three_small_title' ); ?></h6>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_three_main_title' ) ) :
+
+								?>
+
+								<h4><?php the_sub_field( 'txt_sec_three_main_title' ); ?></h4>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txa_sec_three_description' ) ) :
+
+								?>
+
+								<p><?php the_sub_field( 'txa_sec_three_description' ); ?></p>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_three_cta_label' ) && get_sub_field( 'url_sec_three_cta_url' ) ) :
+
+								?>
+
+								<a href='<?php the_sub_field( 'url_sec_three_cta_url' ); ?>'><?php the_sub_field( 'txt_sec_three_cta_label' ); ?></a>
+
+								<?php
+
+							endif;
+
+					?>
+
+						</div> <!-- .module-section -->
+
+					<?php
+
+					endif;
+
+					?>
+
+					<?php
+				   // Section 4
+				   $fields = array( "txt_sec_four_main_title", "txt_sec_four_small_title", "txa_sec_four_description", "txt_sec_four_cta_label", "url_sec_four_cta_url" );
+
+				   if( is_acf_field_exists( $fields ) ) : ?>
+
+						<div class="module-section">
+
+						<?php
+
+							if ( get_sub_field( 'txt_sec_four_small_title' ) ) :
+
+								?>
+
+								<h6><?php the_sub_field( 'txt_sec_four_small_title' ); ?></h6>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_four_main_title' ) ) :
+
+								?>
+
+								<h4><?php the_sub_field( 'txt_sec_four_main_title' ); ?></h4>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txa_sec_four_description' ) ) :
+
+								?>
+
+								<p><?php the_sub_field( 'txa_sec_four_description' ); ?></p>
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
+
+							if ( get_sub_field( 'txt_sec_four_cta_label' ) && get_sub_field( 'url_sec_four_cta_url' ) ) :
+
+								?>
+
+								<a href='<?php the_sub_field( 'url_sec_four_cta_url' ); ?>'><?php the_sub_field( 'txt_sec_four_cta_label' ); ?></a>
+
+								<?php
+
+							endif;
+
+						?>
+
+						</div> <!-- .module-section -->
+
+				   <?php
+
+					endif;
+
+					?>
+
+					</div> <!-- .module -->
+
+				<?php
+
+                endif;
+
             endwhile;
 
 		endif;
