@@ -298,11 +298,25 @@
 
 
 					// Section 1
-					$fields = array( "txt_sec_one_main_title", "txt_sec_one_small_title", "txa_sec_one_description", "txt_sec_one_cta_label", "url_sec_one_cta_url" );
+					$fields = array( "img_sec_one_image", "txt_sec_one_main_title", "txt_sec_one_small_title", "txa_sec_one_description", "txt_sec_one_cta_label", "url_sec_one_cta_url" );
 
-                    if( is_acf_field_exists( $fields ) ) : ?>
+                    if ( is_acf_field_exists( $fields ) ) : ?>
 
 						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'img_sec_one_image' ) ) :
+
+								?>
+
+								<img src='<?php the_sub_field( 'img_sec_one_image' ); ?>' />
+
+								<?php
+
+							endif;
+
+							?>
 
 							<?php
 
@@ -371,11 +385,25 @@
 					<?php
 
 					// Section 2
-					$fields = array( "txt_sec_two_main_title", "txt_sec_two_small_title", "txa_sec_two_description", "txt_sec_two_cta_label", "url_sec_two_cta_url" );
+					$fields = array( "img_sec_two_image", "txt_sec_two_main_title", "txt_sec_two_small_title", "txa_sec_two_description", "txt_sec_two_cta_label", "url_sec_two_cta_url" );
 
-					if( is_acf_field_exists( $fields ) ) : ?>
+					if ( is_acf_field_exists( $fields ) ) : ?>
 
 						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'img_sec_two_image' ) ) :
+
+								?>
+
+								<img src='<?php the_sub_field( 'img_sec_two_image' ); ?>' />
+
+								<?php
+
+							endif;
+
+							?>
 
 							<?php
 
@@ -444,11 +472,25 @@
 					<?php
 
 					// Section 3
-					$fields = array( "txt_sec_three_main_title", "txt_sec_three_small_title", "txa_sec_three_description", "txt_sec_three_cta_label", "url_sec_three_cta_url" );
+					$fields = array( "img_sec_three_image", "txt_sec_three_main_title", "txt_sec_three_small_title", "txa_sec_three_description", "txt_sec_three_cta_label", "url_sec_three_cta_url" );
 
-					if( is_acf_field_exists( $fields ) ) : ?>
+					if ( is_acf_field_exists( $fields ) ) : ?>
 
 						<div class="module-section">
+
+							<?php
+
+							if ( get_sub_field( 'img_sec_three_image' ) ) :
+
+								?>
+
+								<img src='<?php the_sub_field( 'img_sec_three_image' ); ?>' />
+
+								<?php
+
+							endif;
+
+							?>
 
 							<?php
 
@@ -516,13 +558,27 @@
 
 					<?php
 				   // Section 4
-				   $fields = array( "txt_sec_four_main_title", "txt_sec_four_small_title", "txa_sec_four_description", "txt_sec_four_cta_label", "url_sec_four_cta_url" );
+				   $fields = array( "img_sec_four_image", "txt_sec_four_main_title", "txt_sec_four_small_title", "txa_sec_four_description", "txt_sec_four_cta_label", "url_sec_four_cta_url" );
 
-				   if( is_acf_field_exists( $fields ) ) : ?>
+				   if ( is_acf_field_exists( $fields ) ) : ?>
 
 						<div class="module-section">
 
-						<?php
+							<?php
+
+							if ( get_sub_field( 'img_sec_four_image' ) ) :
+
+								?>
+
+								<img src='<?php the_sub_field( 'img_sec_four_image' ); ?>' />
+
+								<?php
+
+							endif;
+
+							?>
+
+							<?php
 
 							if ( get_sub_field( 'txt_sec_four_small_title' ) ) :
 
@@ -586,11 +642,116 @@
 
 					?>
 
+						<div class="clear"></div>
+
 					</div> <!-- .module -->
 
 				<?php
 
                 endif;
+
+				if ( get_row_layout() == 'testimonial' ) :
+
+				?>
+
+					<div class="module">
+
+						<?php
+
+						if ( get_sub_field( 'title' ) ) :
+
+						?>
+
+							<h2><?php the_sub_field( 'title' ); ?></h2>
+
+						<?php
+
+						endif;
+
+						?>
+
+						<?php
+
+						if ( have_rows('rpt_add_testimonial') ) :
+
+							while( have_rows('rpt_add_testimonial') ): the_row();
+
+								// vars
+								$image       = get_sub_field( 'rpt_tst_image' );
+								$description = get_sub_field( 'rpt_tst_description' );
+								$name        = get_sub_field( 'rpt_tst_name' );
+								$email       = get_sub_field( 'rpt_tst_email' );
+
+								$fields = array( "rpt_tst_image", "rpt_tst_description", "rpt_tst_name" ,"rpt_tst_email" );
+
+								if ( is_acf_field_exists( $fields ) ) :
+
+
+								?>
+
+									<div class="testimonial-snippet">
+
+								<?php
+
+									if ( $image ) :
+
+									?>
+
+										<img src='<?php echo $image; ?>' />
+
+									<?php
+
+									endif;
+
+									if ( $description ) :
+
+									?>
+
+										<p><?php echo $description; ?></p>
+
+									<?php
+
+									endif;
+
+									if ( $name ) :
+
+									?>
+
+										<span class="testimonial-name"><?php echo $name; ?></span>
+
+									<?php
+
+									endif;
+
+									if ( $email ) :
+
+									?>
+
+										<span class="testimonial-email"><?php echo $email; ?></span>
+
+									<?php
+
+									endif;
+
+									?>
+
+									</div>
+
+								<?php
+
+								endif;
+
+							endwhile;
+
+						endif;
+
+						?>
+
+					</div> <!-- .module -->
+
+					<?php
+
+				endif;
 
             endwhile;
 
