@@ -29,19 +29,19 @@
 
                     <div class='module'>
 
-                        <?php if ( get_sub_field( 'text' ) ): ?>
+                        <?php if ( get_sub_field( 'text' ) ) : ?>
 
                             <h2><?php the_sub_field( 'text' ); ?></h2>
 
                         <?php endif; ?>
 
-                        <?php if ( get_sub_field( 'image' ) ): ?>
+                        <?php if ( get_sub_field( 'image' ) ) : ?>
 
                             <img src="<?php the_sub_field('image'); ?>" />
 
                         <?php endif; ?>
 
-                        <?php if ( get_sub_field( 'description' ) ): ?>
+                        <?php if ( get_sub_field( 'description' ) ) : ?>
 
                             <p><?php the_sub_field( 'description' ); ?></p>
 
@@ -50,6 +50,10 @@
                         <?php if ( get_sub_field( 'cta_url' ) && get_sub_field( 'cta_label' ) ): ?>
 
                             <span><a href="<?php the_sub_field( 'cta_url' ); ?>"><?php the_sub_field( 'cta_label' ); ?></a></span>
+
+                        <?php elseif ( get_sub_field( 'cta_label' ) ) : ?>
+
+                            <span><?php the_sub_field( 'cta_label' ); ?></span>
 
                         <?php endif; ?>
 
@@ -370,6 +374,10 @@
 
                                     <?php
 
+                                elseif ( get_sub_field( 'txt_sec_one_cta_label' ) ) :
+
+                                    the_sub_field( 'txt_sec_one_cta_label' );
+
                                 endif;
 
                                 ?>
@@ -456,6 +464,10 @@
                                     <a href='<?php the_sub_field( 'url_sec_two_cta_url' ); ?>'><?php the_sub_field( 'txt_sec_two_cta_label' ); ?></a>
 
                                     <?php
+
+                                elseif ( get_sub_field( 'txt_sec_two_cta_label' ) ) :
+
+                                    the_sub_field( 'txt_sec_two_cta_label' );
 
                                 endif;
 
@@ -544,6 +556,10 @@
 
                                     <?php
 
+                                elseif ( get_sub_field( 'txt_sec_three_cta_label' ) ) :
+
+                                    the_sub_field( 'txt_sec_three_cta_label' );
+
                                 endif;
 
                                 ?>
@@ -629,6 +645,10 @@
                                     <a href='<?php the_sub_field( 'url_sec_four_cta_url' ); ?>'><?php the_sub_field( 'txt_sec_four_cta_label' ); ?></a>
 
                                     <?php
+
+                                elseif ( get_sub_field( 'txt_sec_four_cta_label' ) ) :
+
+                                    the_sub_field( 'txt_sec_four_cta_label' );
 
                                 endif;
 
