@@ -828,6 +828,126 @@
 
                 endif;
 
+                if ( get_row_layout() == 'single_col_newsletter' ) :
+
+                    $fields = array( "image", "title" , "description", "signup_button_text", "newsletter_frequency" );
+
+                    if ( is_acf_field_exists( $fields ) ) :
+
+                    ?>
+
+                        <div class="module">
+
+                            <?php
+
+                            if ( get_sub_field( 'image' ) ) :
+
+                            ?>
+
+                                <img src='<?php the_sub_field( 'image' ); ?>' />
+
+                            <?php
+
+                            endif;
+
+                            ?>
+
+                            <?php
+
+                            if ( get_sub_field( 'title' ) ) :
+
+                            ?>
+
+                                <h2><?php the_sub_field( 'title' ); ?></h2>
+
+                            <?php
+
+                            endif;
+
+                            ?>
+
+                            <?php
+
+                            if ( get_sub_field( 'description' ) ) :
+
+                            ?>
+
+                                <p><?php the_sub_field( 'description' ); ?></p>
+
+                            <?php
+
+                            endif;
+
+                            ?>
+
+                            <?php
+
+                            $fields = array( "signup_button_text" );
+
+                            if ( is_acf_field_exists( $fields ) ) :
+
+                            ?>
+
+                                <form action="#">
+
+                                    <?php
+
+                                    if ( get_sub_field( 'signup_button_text' ) ) :
+
+                                    ?>
+
+                                        <input type="text" name="email-input" />
+
+                                        <input type="submit" value='<?php the_sub_field( 'signup_button_text' ); ?>' />
+
+                                    <?php
+
+                                    endif;
+
+                                    ?>
+
+                                    <?php
+
+                                    if ( have_rows( 'newsletter_frequency' ) ) :
+
+                                        while( have_rows( 'newsletter_frequency' ) ) : the_row();
+
+                                    ?>
+
+                                            <input type="checkbox" name="newsletter-frequency" value='<?php the_sub_field( 'frequency_value' ); ?>'><?php the_sub_field( 'frequency_label' ); ?>
+
+                                    <?php
+
+                                        endwhile;
+
+                                    ?>
+
+                                    <?php
+
+                                    endif;
+
+                                    ?>
+
+                                </form>
+
+                            <?php
+
+                            endif;
+
+                            ?>
+
+                        </div>
+
+                    <?php
+
+                    endif;
+
+                    ?>
+
+                    <?php
+
+                endif;
+
             endwhile;
 
         endif;

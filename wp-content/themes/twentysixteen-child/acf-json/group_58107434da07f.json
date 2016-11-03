@@ -1363,6 +1363,166 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "581b07c606cd2",
+                    "name": "single_col_newsletter",
+                    "label": "Single Column Newsletter",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_581b07e206cd3",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "The image should be 1050px (width) x 600px (height)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": 1050,
+                            "min_height": 600,
+                            "min_size": "",
+                            "max_width": 1050,
+                            "max_height": 600,
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_581b087306cd4",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_581b087f06cd5",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_581b088c06cd6",
+                            "label": "Signup Button Text",
+                            "name": "signup_button_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Sign Up",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_581b092406cd8",
+                            "label": "Newsletter Frequency",
+                            "name": "newsletter_frequency",
+                            "type": "repeater",
+                            "instructions": "Add up to three options as it might break the layout when added more. Click 'Add Dropdown option' to add an option.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": "",
+                            "max": "",
+                            "layout": "table",
+                            "button_label": "Add Dropdown option",
+                            "sub_fields": [
+                                {
+                                    "key": "field_581b094b06cda",
+                                    "label": "Frequency Value",
+                                    "name": "frequency_value",
+                                    "type": "text",
+                                    "instructions": "This value will be used by the application and is not shown to the user.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 40,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_581b093806cd9",
+                                    "label": "Frequency Label",
+                                    "name": "frequency_label",
+                                    "type": "text",
+                                    "instructions": "This text is to be perceived by the users while opting for the newsletter.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": 60,
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
         }
@@ -1384,5 +1544,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478158490
+    "modified": 1478172639
 }
