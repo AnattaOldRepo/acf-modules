@@ -948,6 +948,60 @@
 
                 endif;
 
+                if ( get_row_layout() == 'full_width_image_newsletter' ) :
+
+                    $fields = array( "title", "tagline", "txt_subscribe" );
+
+                    if( is_acf_field_exists( $fields ) ) :
+
+                    ?>
+
+                        <div class="module">
+
+                            <?php
+
+                            if ( get_sub_field( 'title' ) ) :
+
+                            ?>
+
+                                <p class="fw-newsletter-title"><?php the_sub_field( 'title' ); ?></p>
+
+                            <?php
+
+                            endif;
+
+                            if ( get_sub_field( 'tagline' ) ) :
+
+                            ?>
+
+                                <p class="fw-newsletter-tagline"><?php the_sub_field( 'tagline' ); ?></p>
+
+                            <?php
+
+                            endif;
+
+                            if ( get_sub_field( 'txt_subscribe_btn' ) ) :
+
+                            ?>
+
+                                <input type="text" name="fw-newsletter-email" >
+
+                                <input type="submit" value='<?php the_sub_field( 'txt_subscribe_btn' ); ?>' />
+
+                            <?php
+
+                            endif;
+
+                            ?>
+
+                        </div>
+
+                    <?php
+
+                    endif;
+
+                endif;
+
             endwhile;
 
         endif;
