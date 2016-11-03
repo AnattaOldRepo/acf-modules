@@ -753,6 +753,81 @@
 
                 endif;
 
+                if ( get_row_layout() == 'instagram' ) :
+
+                    if ( get_sub_field( 'instgrm_api_access_token' ) ) :
+
+                        // Refer https://www.instagram.com/developer/endpoints/users/
+                        $instagram_api_url  = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=';
+                        $instagram_api_url .= get_sub_field( 'instgrm_api_access_token' );
+
+                        $response = wp_remote_get( esc_url_raw( $instagram_api_url ) );
+                        $recent_media = '';
+
+                        if( is_array( $response ) ) {
+                            $header = $response['headers']; // array of http header lines
+                            $body = $response['body']; // use the content
+
+                            $result = json_decode( $body, true );
+                            $recent_media = $result["data"];
+                        }
+
+                        if ( ! empty( $recent_media ) ) :
+
+                        ?>
+                            <div class="module">
+
+                            <?php
+
+                            if ( get_sub_field( 'instgrm_hashtag' ) ) :
+
+                            ?>
+
+                                <span class="instagram-hashtag">#<?php the_sub_field( 'instgrm_hashtag' ); ?></span>
+
+                            <?php
+
+                            endif;
+
+                            ?>
+
+                            <?php
+
+                            if ( get_sub_field( 'instgrm_title' ) ) :
+
+                            ?>
+                                <h2><?php the_sub_field( 'instgrm_title' ); ?></h2>
+
+                            <?php
+
+                            endif;
+
+                            ?>
+
+                            <?php
+
+                            foreach( $recent_media as $item ) :
+
+                            ?>
+
+                                <a href='<?php echo $item["link"]; ?>'><img class="instagram-image-single" src='<?php echo $item["images"]["thumbnail"]["url"]; ?>' /></a>
+
+                            <?php
+
+                            endforeach;
+
+                        ?>
+
+                            </div><!--.module-->
+
+                        <?php
+
+                        endif;
+
+                    endif;
+
+                endif;
+
             endwhile;
 
         endif;

@@ -1174,8 +1174,8 @@
                             "collapsed": "",
                             "min": "",
                             "max": "",
-                            "layout": "row",
                             "button_label": "Add Testimonial",
+                            "layout": "table",
                             "sub_fields": [
                                 {
                                     "key": "field_5819dd80d0bc1",
@@ -1269,6 +1269,100 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "581ae510c1bf6",
+                    "name": "instagram",
+                    "label": "Instagram",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_581ae67ac1bf7",
+                            "label": "Hashtag",
+                            "name": "instgrm_hashtag",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "#",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_581ae689c1bf8",
+                            "label": "Title",
+                            "name": "instgrm_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_581ae6a6c1bf9",
+                            "label": "Instagram Username",
+                            "name": "instgrm_username",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_581ae6b6c1bfa",
+                            "label": "API Access Token",
+                            "name": "instgrm_api_access_token",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
         }
@@ -1290,5 +1384,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478095712
+    "modified": 1478158490
 }
