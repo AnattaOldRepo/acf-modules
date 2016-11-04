@@ -1596,6 +1596,31 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "581c52cb104d6",
+                    "name": "test",
+                    "label": "Test",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_581c539a6e447",
+                            "label": "Mask text",
+                            "name": "mask_text",
+                            "type": "mask_text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "font_size": 14
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
         }
@@ -1617,5 +1642,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478180466
+    "modified": 1478251437
 }
