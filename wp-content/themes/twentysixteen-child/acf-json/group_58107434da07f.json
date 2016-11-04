@@ -1599,8 +1599,8 @@
                 },
                 {
                     "key": "581c52cb104d6",
-                    "name": "test",
-                    "label": "Test",
+                    "name": "project_mask_text",
+                    "label": "Project Mask Text",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -1616,7 +1616,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "font_size": 14
+                            "font_size": 14,
+                            "mask_text": "000 000"
                         }
                     ],
                     "min": "",
@@ -1642,5 +1643,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478251437
+    "modified": 1478261371
 }
