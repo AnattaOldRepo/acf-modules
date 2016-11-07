@@ -44,7 +44,7 @@ class acf_field_latlong_locator extends acf_field {
 		*  category (string) basic | content | choice | relational | jquery | layout | CUSTOM GROUP NAME
 		*/
 		
-		$this->category = 'basic';
+		$this->category = 'Custom';
 		
 		
 		/*
@@ -150,6 +150,14 @@ class acf_field_latlong_locator extends acf_field {
 		
 		?>
 		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<fieldset class="gllpLatlonPicker">
+			<input type="text" class="gllpSearchField">
+			<input type="button" class="gllpSearchButton" value="search">
+			<div class="gllpMap">Google Maps</div>
+			<input type="hidden" class="gllpLatitude" value="20"/>
+			<input type="hidden" class="gllpLongitude" value="20"/>
+			<input type="hidden" class="gllpZoom" value="3"/>
+		</fieldset>
 		<?php
 	}
 	
@@ -168,8 +176,7 @@ class acf_field_latlong_locator extends acf_field {
 	*  @return	n/a
 	*/
 
-	/*
-	
+
 	function input_admin_enqueue_scripts() {
 		
 		// vars
@@ -178,18 +185,25 @@ class acf_field_latlong_locator extends acf_field {
 		
 		
 		// register & include JS
-		wp_register_script( 'acf-input-latlong_locator', "{$url}assets/js/input.js", array('acf-input'), $version );
-		wp_enqueue_script('acf-input-latlong_locator');
-		
+		// wp_register_script( 'acf-input-google-maps', "http://maps.googleapis.com/maps/api/js?sensor=false", array(), $version );
+		wp_register_script( 'acf-input-google-maps', "https://maps.googleapis.com/maps/api/js?key=AIzaSyDRoWXl9Z-auDoZXssuBgCx6uFqGjmsh_4", array(), $version );
+		wp_register_script( 'acf-input-location-picker', "{$url}assets/js/jquery-gmaps-latlon-picker.js", array( 'jquery' ), $version );
+		wp_register_script( 'acf-input-latlong_locator', "{$url}assets/js/input.js", array( 'acf-input' ), $version );
+		// wp_register_script( 'acf-input-latlong_locator', "{$url}assets/js/acf-latlong-locator.js", array( 'acf-input' ), $version );
+		wp_enqueue_script( 'acf-input-google-maps' );
+		wp_enqueue_script( 'acf-input-location-picker' );
+		wp_enqueue_script( 'acf-input-latlong_locator' );
+
 		
 		// register & include CSS
 		wp_register_style( 'acf-input-latlong_locator', "{$url}assets/css/input.css", array('acf-input'), $version );
-		wp_enqueue_style('acf-input-latlong_locator');
-		
+		wp_register_style( 'acf-input-latlon-style-picker', "{$url}assets/css/jquery-gmaps-latlon-picker.css", array(), $version );
+		wp_enqueue_style( 'acf-input-latlong_locator' );
+		wp_enqueue_style( 'acf-input-latlon-style-picker' );
+
 	}
 	
-	*/
-	
+
 	
 	/*
 	*  input_admin_head()

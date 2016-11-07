@@ -1621,6 +1621,52 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "5820700002b27",
+                    "name": "project_latlong_locator",
+                    "label": "Project Latlong locator",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5820700902b28",
+                            "label": "",
+                            "name": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_58207d0c845de",
+                            "label": "Latlong locator",
+                            "name": "latlong_locator",
+                            "type": "latlong_locator",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "font_size": 14
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
         }
@@ -1642,5 +1688,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478515278
+    "modified": 1478525410
 }
