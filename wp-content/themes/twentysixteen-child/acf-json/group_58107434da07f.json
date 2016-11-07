@@ -1616,8 +1616,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "font_size": 14,
-                            "mask_text": "(000)-000-0000"
+                            "mask_pattern": "(000)-000-0000"
                         }
                     ],
                     "min": "",
@@ -1643,5 +1642,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478261538
+    "modified": 1478515278
 }

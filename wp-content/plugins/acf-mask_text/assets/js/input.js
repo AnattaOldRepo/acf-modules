@@ -4,12 +4,20 @@
 	function initialize_field( $el ) {
 
 		//$el.doStuff();
-		$($el).find( 'input[type=text]' ).mask( '00/00/0000' );
-		/*
-		jQuery($el).keyup(function() {
-			alert(jQuery($el).val());
-		});
-		*/
+
+		// Vars.
+		var inputElement,
+			maskPattern;
+
+		// Masked Input field.
+		inputElement = ( $el ).find( 'input[type=text].masked-input' );
+
+		// Retrieve mask pattern defined by creator of the input field.
+		maskPattern = inputElement.attr( 'maskpattern' );
+
+		// Apply mask on the input field.
+		inputElement.mask( maskPattern );
+
 	}
 
 	
@@ -31,7 +39,7 @@
 		
 		acf.add_action('ready append', function( $el ){
 			
-			// search $el for fields of type 'FIELD_NAME'
+			// search $el for fields of type 'mask_text'
 			acf.get_fields({ type : 'mask_text'}, $el).each(function(){
 				
 				initialize_field( $(this) );

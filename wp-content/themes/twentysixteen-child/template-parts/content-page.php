@@ -1022,6 +1022,34 @@
 
                 endif;
 
+                if ( get_row_layout() == 'project_mask_text' ) :
+
+                ?>
+
+                    <div class="module">
+
+                        <?php
+
+                        if ( get_sub_field( 'mask_text' ) ) :
+
+                        ?>
+
+                            <h2>Masked text field</h2>
+
+                            <span class="mask-field-value"><?php the_sub_field( 'mask_text' ); ?></span>
+
+                        <?php
+
+                        endif;
+
+                        ?>
+
+                    </div><!-- .module -->
+
+                <?php
+
+                endif;
+
             endwhile;
 
         endif;

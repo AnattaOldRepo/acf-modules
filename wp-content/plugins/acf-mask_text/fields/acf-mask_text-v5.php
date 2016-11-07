@@ -52,8 +52,8 @@ class acf_field_mask_text extends acf_field {
 		*/
 		
 		$this->defaults = array(
-			'font_size'	=> 14,
-			'mask_text' => '000 000',
+			// 'font_size'	=> 14,
+			'mask_pattern' => '(000)-000-0000',
 		);
 		
 		
@@ -105,6 +105,7 @@ class acf_field_mask_text extends acf_field {
 		*  Please note that you must also have a matching $defaults value for the field name (font_size)
 		*/
 		
+		/*
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Font Size','acf-mask_text'),
 			'instructions'	=> __('Customise the input font size','acf-mask_text'),
@@ -112,12 +113,13 @@ class acf_field_mask_text extends acf_field {
 			'name'			=> 'font_size',
 			'prepend'		=> 'px',
 		));
+		*/
 
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Mask Text','acf-mask_text'),
-			'instructions'	=> __('Enter the mask input','acf-mask_text'),
+			'label'			=> __('Mask Pattern','acf-mask_text'),
+			'instructions'	=> __('Enter the mask pattern','acf-mask_text'),
 			'type'			=> 'text',
-			'name'			=> 'mask_text',
+			'name'			=> 'mask_pattern',
 		));
 
 	}
@@ -146,6 +148,7 @@ class acf_field_mask_text extends acf_field {
 		*  Review the data of $field.
 		*  This will show what data is available
 		*/
+
 		/*
 		echo '<pre>';
 			print_r( $field );
@@ -157,7 +160,7 @@ class acf_field_mask_text extends acf_field {
 		*/
 		
 		?>
-		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<input type="text" class="masked-input" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" maskpattern="<?php echo esc_attr( $field['mask_pattern'] ) ?>" />
 		<?php
 	}
 	
@@ -187,9 +190,9 @@ class acf_field_mask_text extends acf_field {
 		
 		// register & include JS
 		wp_register_script( 'jquery-mask', "{$url}assets/js/jquery.mask.js", array( 'jquery' ), $version );
-		wp_register_script( 'acf-input-mask_text', "{$url}assets/js/input.js", array('acf-input'), $version );
-		wp_enqueue_script('jquery-mask');
-		wp_enqueue_script('acf-input-mask_text');
+		wp_register_script( 'acf-input-mask_text', "{$url}assets/js/input.js", array( 'acf-input' ), $version );
+		wp_enqueue_script( 'jquery-mask' );
+		wp_enqueue_script( 'acf-input-mask_text' );
 
 		
 		// register & include CSS
