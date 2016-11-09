@@ -233,6 +233,10 @@ $.fn.gMapsLatLonPicker = (function() {
 
 }(jQuery));
 
+/*
+ * The following lines can be commented.
+ * As the .gllpLatlonPicker is intialized in /wp-content/plugins/acf-latlong_locator/assets/js/jquery-gmaps-latlon-picker.js
+ */
 $(document).ready( function() {
 	if (!$.gMapsLatLonPickerNoAutoInit) {
 		$(".gllpLatlonPicker").each(function () {

@@ -138,18 +138,19 @@ class acf_field_latlong_locator extends acf_field {
 		*  Review the data of $field.
 		*  This will show what data is available
 		*/
-		
+
+		/*
 		echo '<pre>';
 			print_r( $field );
 		echo '</pre>';
-		
+		*/
 		
 		/*
 		*  Create a simple text input using the 'font_size' setting.
 		*/
 		
 		?>
-		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<input type="hidden" class="geo-locator" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
 		<fieldset class="gllpLatlonPicker">
 			<input type="text" class="gllpSearchField">
 			<input type="button" class="gllpSearchButton" value="search">
@@ -189,7 +190,7 @@ class acf_field_latlong_locator extends acf_field {
 		wp_register_script( 'acf-input-google-maps', "https://maps.googleapis.com/maps/api/js?key=AIzaSyDRoWXl9Z-auDoZXssuBgCx6uFqGjmsh_4", array(), $version );
 		wp_register_script( 'acf-input-location-picker', "{$url}assets/js/jquery-gmaps-latlon-picker.js", array( 'jquery' ), $version );
 		wp_register_script( 'acf-input-latlong_locator', "{$url}assets/js/input.js", array( 'acf-input' ), $version );
-		// wp_register_script( 'acf-input-latlong_locator', "{$url}assets/js/acf-latlong-locator.js", array( 'acf-input' ), $version );
+
 		wp_enqueue_script( 'acf-input-google-maps' );
 		wp_enqueue_script( 'acf-input-location-picker' );
 		wp_enqueue_script( 'acf-input-latlong_locator' );
@@ -344,15 +345,19 @@ class acf_field_latlong_locator extends acf_field {
 	*  @return	$value
 	*/
 	
-	/*
-	
+
+
 	function load_value( $value, $post_id, $field ) {
-		
+
+		if ( is_array( $value ) ) {
+			$value = implode( "|", $value );
+		}
+
 		return $value;
-		
+
 	}
-	
-	*/
+
+
 	
 	
 	/*
@@ -370,21 +375,29 @@ class acf_field_latlong_locator extends acf_field {
 	*  @return	$value
 	*/
 	
-	/*
+
 	
 	function update_value( $value, $post_id, $field ) {
-		
+
+		if ( false !== strpos( $value, "|" ) ) {
+			$latlong = explode( "|", $value );
+			$value = array(
+				"lat"	=> $latlong[0],
+				"long"	=> $latlong[1],
+			);
+		}
+
 		return $value;
 		
 	}
 	
-	*/
+
 	
 	
 	/*
 	*  format_value()
 	*
-	*  This filter is appied to the $value after it is loaded from the db and before it is returned to the template
+	*  This filter is applied to the $value after it is loaded from the db and before it is returned to the template
 	*
 	*  @type	filter
 	*  @since	3.6
@@ -398,9 +411,9 @@ class acf_field_latlong_locator extends acf_field {
 	*/
 		
 	/*
-	
+
 	function format_value( $value, $post_id, $field ) {
-		
+
 		// bail early if no value
 		if( empty($value) ) {
 		
@@ -416,15 +429,14 @@ class acf_field_latlong_locator extends acf_field {
 			// $value = 'something';
 		
 		}
-		
-		
+
 		// return
 		return $value;
 	}
-	
+
 	*/
-	
-	
+
+
 	/*
 	*  validate_value()
 	*

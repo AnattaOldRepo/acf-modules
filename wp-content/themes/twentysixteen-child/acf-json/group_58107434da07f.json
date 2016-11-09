@@ -1629,27 +1629,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5820700902b28",
-                            "label": "",
-                            "name": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
                             "key": "field_58207d0c845de",
                             "label": "Latlong locator",
                             "name": "latlong_locator",
@@ -1688,5 +1667,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478525410
+    "modified": 1478682371
 }
