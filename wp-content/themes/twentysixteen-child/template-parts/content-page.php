@@ -1050,6 +1050,39 @@
 
                 endif;
 
+                if ( get_row_layout() == 'project_latlong_locator' ) :
+
+                    if ( get_sub_field( 'latlong_locator' ) ) :
+
+                        get_template_part( 'acf-template-specifics/register', 'scripts' );
+                        get_template_part( 'acf-template-specifics/register', 'styles' );
+
+                    ?>
+
+                    <h2>Project: Latlong Locator</h2>
+
+                    <?php
+
+                        $latlon_value = get_sub_field( 'latlong_locator' );
+                        $latlon = explode ( "|", $latlon_value );
+
+                    ?>
+
+                    <fieldset class="gllpLatlonPicker">
+                        <!--<input type="text" class="gllpSearchField">-->
+                        <!--<input type="button" class="gllpSearchButton" value="search">-->
+                        <div class="gllpMap">Google Maps</div>
+                        <input type="hidden" class="gllpLatitude" value="<?php echo $latlon[0]; ?>"/>
+                        <input type="hidden" class="gllpLongitude" value="<?php echo $latlon[1]; ?>"/>
+                        <input type="hidden" class="gllpZoom" value="11"/>
+                    </fieldset>
+
+                    <?php
+
+                    endif;
+
+                endif;
+
             endwhile;
 
         endif;
