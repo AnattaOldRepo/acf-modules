@@ -35,11 +35,15 @@
 
                         <?php endif; ?>
 
-                        <?php if ( get_sub_field( 'image' ) ) : ?>
+                        <?php if ( get_sub_field( 'image' ) ) :
 
-                            <img src="<?php the_sub_field('image'); ?>" />
+                            $image_attr = get_sub_field( 'image' );
+                            $image_id = $image_attr["ID"];
+                            echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 430, 400 ) );
 
-                        <?php endif; ?>
+                        endif;
+
+                        ?>
 
                         <?php if ( get_sub_field( 'description' ) ) : ?>
 
@@ -110,11 +114,9 @@
 
                                 if ( get_sub_field( 'st_one_image' ) ) :
 
-                                    ?>
-
-                                    <img src='<?php the_sub_field( 'st_one_image' ); ?>' />
-
-                                    <?php
+                                    $image_attr = get_sub_field( 'st_one_image' );
+                                    $image_id = $image_attr["ID"];
+                                    echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 335, 320 ) );
 
                                 endif;
 
@@ -169,11 +171,9 @@
 
                                 if ( get_sub_field( 'st_two_image' ) ) :
 
-                                    ?>
-
-                                    <img src='<?php the_sub_field( 'st_two_image' ); ?>' />
-
-                                    <?php
+                                    $image_attr = get_sub_field( 'st_two_image' );
+                                    $image_id = $image_attr["ID"];
+                                    echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 335, 320 ) );
 
                                 endif;
 
@@ -228,11 +228,9 @@
 
                                 if ( get_sub_field( 'st_three_image' ) ) :
 
-                                    ?>
-
-                                    <img src='<?php the_sub_field( 'st_three_image' ); ?>' />
-
-                                    <?php
+                                    $image_attr = get_sub_field( 'st_three_image' );
+                                    $image_id = $image_attr["ID"];
+                                    echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 335, 320 ) );
 
                                 endif;
 
@@ -312,11 +310,9 @@
 
                                 if ( get_sub_field( 'img_sec_one_image' ) ) :
 
-                                    ?>
-
-                                    <img src='<?php the_sub_field( 'img_sec_one_image' ); ?>' />
-
-                                    <?php
+                                    $image_attr = get_sub_field( 'img_sec_one_image' );
+                                    $image_id = $image_attr["ID"];
+                                    echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 150, 150 ) );
 
                                 endif;
 
@@ -403,11 +399,9 @@
 
                                 if ( get_sub_field( 'img_sec_two_image' ) ) :
 
-                                    ?>
-
-                                    <img src='<?php the_sub_field( 'img_sec_two_image' ); ?>' />
-
-                                    <?php
+                                    $image_attr = get_sub_field( 'img_sec_two_image' );
+                                    $image_id = $image_attr["ID"];
+                                    echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 150, 150 ) );
 
                                 endif;
 
@@ -494,11 +488,9 @@
 
                                 if ( get_sub_field( 'img_sec_three_image' ) ) :
 
-                                    ?>
-
-                                    <img src='<?php the_sub_field( 'img_sec_three_image' ); ?>' />
-
-                                    <?php
+                                    $image_attr = get_sub_field( 'img_sec_three_image' );
+                                    $image_id = $image_attr["ID"];
+                                    echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 150, 150 ) );
 
                                 endif;
 
@@ -584,11 +576,9 @@
 
                                 if ( get_sub_field( 'img_sec_four_image' ) ) :
 
-                                    ?>
-
-                                    <img src='<?php the_sub_field( 'img_sec_four_image' ); ?>' />
-
-                                    <?php
+                                    $image_attr = get_sub_field( 'img_sec_four_image' );
+                                    $image_id = $image_attr["ID"];
+                                    echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 150, 150 ) );
 
                                 endif;
 
@@ -715,11 +705,7 @@
 
                                         if ( $image ) :
 
-                                            ?>
-
-                                            <img src='<?php echo $image; ?>' />
-
-                                            <?php
+                                            echo wp_get_attachment_image( intval( $image["ID"] ), array( 154, 154 ) );
 
                                         endif;
 
@@ -867,11 +853,9 @@
 
                             if ( get_sub_field( 'image' ) ) :
 
-                            ?>
-
-                                <img src='<?php the_sub_field( 'image' ); ?>' />
-
-                            <?php
+                                $image_attr = get_sub_field( 'image' );
+                                $image_id = $image_attr["ID"];
+                                echo wp_get_attachment_image( intval( $image_attr["ID"] ), array( 1050, 600 ) );
 
                             endif;
 

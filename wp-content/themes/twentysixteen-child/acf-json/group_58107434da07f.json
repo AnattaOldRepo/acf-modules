@@ -30,7 +30,7 @@
                             "label": "Image",
                             "name": "image",
                             "type": "image",
-                            "instructions": "Width should be 430px",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -38,13 +38,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 430,
+                            "min_width": "",
                             "min_height": "",
                             "min_size": "",
-                            "max_width": 430,
+                            "max_width": "",
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
@@ -248,7 +248,7 @@
                             "label": "Image",
                             "name": "st_one_image",
                             "type": "image",
-                            "instructions": "Image should be 335px wide and 320px in height.",
+                            "instructions": "Preferred dimensions - 335px (W) x 320px (H)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -256,13 +256,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 335,
+                            "min_width": "",
                             "min_height": 320,
                             "min_size": "",
-                            "max_width": 335,
+                            "max_width": "",
                             "max_height": 320,
                             "max_size": "",
                             "mime_types": ""
@@ -351,7 +351,7 @@
                             "label": "Image",
                             "name": "st_two_image",
                             "type": "image",
-                            "instructions": "Image should be 335px wide and 320px in height.",
+                            "instructions": "Preferred dimensions - 335px (W) x 320px (H)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -359,13 +359,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 335,
+                            "min_width": "",
                             "min_height": 320,
                             "min_size": "",
-                            "max_width": 335,
+                            "max_width": "",
                             "max_height": 320,
                             "max_size": "",
                             "mime_types": ""
@@ -454,7 +454,7 @@
                             "label": "Image",
                             "name": "st_three_image",
                             "type": "image",
-                            "instructions": "Image should be 335px wide and 320px in height.",
+                            "instructions": "Preferred dimensions - 335px (W) x 320px (H)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -462,13 +462,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 335,
+                            "min_width": "",
                             "min_height": 320,
                             "min_size": "",
-                            "max_width": 335,
+                            "max_width": "",
                             "max_height": 320,
                             "max_size": "",
                             "mime_types": ""
@@ -596,7 +596,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -736,7 +736,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -876,7 +876,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -1016,7 +1016,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -1174,15 +1174,15 @@
                             "collapsed": "",
                             "min": "",
                             "max": "",
-                            "button_label": "Add Testimonial",
                             "layout": "table",
+                            "button_label": "Add Testimonial",
                             "sub_fields": [
                                 {
                                     "key": "field_5819dd80d0bc1",
                                     "label": "Image",
                                     "name": "rpt_tst_image",
                                     "type": "image",
-                                    "instructions": "The width and height of the image should be 154px.",
+                                    "instructions": "Preferred image dimensions - 154px (W) x 154px (H)",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -1190,13 +1190,13 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "url",
+                                    "return_format": "array",
                                     "preview_size": "thumbnail",
                                     "library": "all",
-                                    "min_width": 154,
+                                    "min_width": "",
                                     "min_height": "",
                                     "min_size": "",
-                                    "max_width": 154,
+                                    "max_width": "",
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": ""
@@ -1354,7 +1354,7 @@
                             "label": "Image",
                             "name": "image",
                             "type": "image",
-                            "instructions": "The image should be 1050px (width) x 600px (height)",
+                            "instructions": "Preferred image dimensions - 1050px (W) x 600px (H)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1362,13 +1362,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 1050,
+                            "min_width": "",
                             "min_height": 600,
                             "min_size": "",
-                            "max_width": 1050,
+                            "max_width": "",
                             "max_height": 600,
                             "max_size": "",
                             "mime_types": ""
@@ -1646,5 +1646,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478697043
+    "modified": 1478782988
 }
