@@ -969,40 +969,55 @@
 
                             <?php
 
-                            if ( get_sub_field( 'title' ) ) :
-
-                            ?>
-
-                                <p class="fw-newsletter-title"><?php the_sub_field( 'title' ); ?></p>
-
-                            <?php
-
-                            endif;
-
-                            if ( get_sub_field( 'tagline' ) ) :
-
-                            ?>
-
-                                <p class="fw-newsletter-tagline"><?php the_sub_field( 'tagline' ); ?></p>
-
-                            <?php
-
-                            endif;
-
                             if ( get_sub_field( 'txt_subscribe_btn' ) ) :
 
                             ?>
 
-                                <input type="text" name="fw-newsletter-email" >
+                                <form method="POST" action="#">
 
-                                <input type="submit" value='<?php the_sub_field( 'txt_subscribe_btn' ); ?>' />
+                                    <?php
 
-                            <?php
+                                    if ( get_sub_field( 'title' ) ) :
+
+                                    ?>
+
+                                        <p class="fw-newsletter-title"><?php the_sub_field( 'title' ); ?></p>
+
+                                    <?php
+
+                                    endif;
+
+                                    if ( get_sub_field( 'tagline' ) ) :
+
+                                    ?>
+
+                                        <p class="fw-newsletter-tagline"><?php the_sub_field( 'tagline' ); ?></p>
+
+                                    <?php
+
+                                    endif;
+
+                                    if ( get_sub_field( 'txt_subscribe_btn' ) ) :
+
+                                    ?>
+
+                                        <input type="text" name="fw-newsletter-email" >
+
+                                        <input type="submit" value='<?php the_sub_field( 'txt_subscribe_btn' ); ?>' />
+
+                                    <?php
+
+                                    endif;
+
+                                    ?>
+
+                                </form>
+
+                                <?php
 
                             endif;
 
                             ?>
-
                         </div>
 
                     <?php
