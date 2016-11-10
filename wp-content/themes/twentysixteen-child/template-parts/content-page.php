@@ -790,6 +790,7 @@
 
                             $result = json_decode( $body, true );
                             $recent_media = $result["data"];
+
                         }
 
                         if ( ! empty( $recent_media ) ) :
@@ -830,9 +831,13 @@
 
                             ?>
 
+                                <?php if ( ! empty( $item["tags"] ) && array_search( get_sub_field( 'instgrm_hashtag' ), $item["tags"] ) !== false ) : ?>
+
                                 <a href='<?php echo $item["link"]; ?>'><img class="instagram-image-single" src='<?php echo $item["images"]["thumbnail"]["url"]; ?>' /></a>
 
                             <?php
+
+                                endif;
 
                             endforeach;
 
