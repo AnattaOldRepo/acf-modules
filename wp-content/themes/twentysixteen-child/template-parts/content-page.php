@@ -1038,7 +1038,7 @@
         <?php
 
         $InstanceCache = get_cache_instance();
-        $cached_string = $InstanceCache->getItem( 'acf_modules_footer' );
+        $cached_string = $InstanceCache->getItem( prefix_id_with_cache_key( 'acf_modules_footer' ) );
 
         if( is_null( $cached_string->get() ) ) :
             ob_start();

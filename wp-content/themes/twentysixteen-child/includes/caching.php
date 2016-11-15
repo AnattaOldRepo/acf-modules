@@ -28,3 +28,8 @@ function get_cache_instance() {
     //echo "GetCacheInstance";
     return $InstanceCache;
 }
+
+function prefix_id_with_cache_key( $key ) {
+    $page_id = get_the_ID();
+    return $page_id . '-' . $key;
+}
