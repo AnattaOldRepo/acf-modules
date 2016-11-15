@@ -1,5 +1,6 @@
 *.log
 wp-config.php
+cache-tmp/
 .idea/
 wp-content/uploads
 phpmyadmin

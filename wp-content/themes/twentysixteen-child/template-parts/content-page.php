@@ -8,6 +8,9 @@
  */
 ?>
 
+<?php require_once( get_stylesheet_directory() . '/includes/caching.php' ); ?>
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -1029,6 +1032,29 @@
             endwhile;
 
         endif;
+
+        ?>
+
+        <?php
+
+        $InstanceCache = get_cache_instance();
+        $cached_string = $InstanceCache->getItem( 'acf_modules_footer' );
+
+        if( is_null( $cached_string->get() ) ) :
+            ob_start();
+        ?>
+
+            <b>Files Cache</b> --> <i>Cache Enabled</i> --> <u>Well done</u> !
+
+        <?php
+            $buffer = ob_get_clean();
+            $cached_string->set( $buffer );
+            $cached_string->expiresAfter( HOUR_IN_SECONDS * 12 );
+            $InstanceCache->save( $cached_string );
+
+        endif;
+
+        echo $cached_string->get();
 
         the_content();
 
